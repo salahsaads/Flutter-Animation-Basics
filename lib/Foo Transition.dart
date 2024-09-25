@@ -12,11 +12,25 @@ class _Home2State extends State<Home2> with TickerProviderStateMixin {
   late Animation<AlignmentGeometry> _greenTween;
   late Animation<AlignmentGeometry> _redTween;
   late AnimationController _parent;
+  late AnimationController _parent1;
+
+@override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    _parent.dispose();
+    _parent1.dispose();
+  }
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     _parent = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+      reverseDuration: const Duration(seconds: 5),
+    );
+    _parent1 = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 2),
       reverseDuration: const Duration(seconds: 5),
@@ -29,7 +43,25 @@ class _Home2State extends State<Home2> with TickerProviderStateMixin {
             reverseCurve: Curves.bounceOut));
     _redTween = Tween<AlignmentGeometry>(
             begin: Alignment.centerLeft, end: Alignment.centerRight)
-        .animate(_parent);
+        .animate(_parent1);
+
+    // _parent.addStatusListener((status) {
+    //   if (_parent.status == AnimationStatus.completed) {
+    //     _parent1.forward();
+    //   }
+    //   if (_parent1.status == AnimationStatus.dismissed) {
+    //     _parent.reverse();
+    //   }
+    // });
+
+    // _greenTween.value; بعرف وصل لفين
+    //_parent.value;
+
+
+    //_greenTween.addListener(() => setState(() {}));
+    //_parent1.addListener(() => setState(() {}));
+    //_parent.removestatusListener(() => setState(() {}));
+    //_parent1.removeListener(() => setState(() {}));
   }
 
   @override
