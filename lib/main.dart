@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:quran1/Animated%20Builder.dart';
 import 'package:quran1/Foo%20Transition.dart';
 import 'package:quran1/TweenAnimationBuilder.dart';
 
@@ -16,7 +17,7 @@ class AnimatedContainerExampleApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Home2(),
+        body: Animated_Builder(),
       ),
     );
   }
