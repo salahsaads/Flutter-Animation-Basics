@@ -1,10 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:quran1/Animated%20Builder.dart';
-import 'package:quran1/Foo%20Transition.dart';
-import 'package:quran1/TweenAnimationBuilder.dart';
 
-import 'AnimatedContainer.dart';
+import 'Animated Default Text Style.dart';
 
 /// Flutter code sample for [AnimatedContainer].
 
@@ -15,9 +12,9 @@ class AnimatedContainerExampleApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
-        body: Animated_Builder(),
+        body: Animated_Default_Text_Style(),
       ),
     );
   }

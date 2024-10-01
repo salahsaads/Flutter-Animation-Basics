@@ -88,14 +88,14 @@ class _Home2State extends State<Home2> with TickerProviderStateMixin {
             children: [
               AlignTransition(
                 alignment: _greenTween,
-                child: CircleAvatar(
+                child: const CircleAvatar(
                   radius: 30,
                   backgroundColor: Colors.black,
                 ),
               ),
               AlignTransition(
                 alignment: _redTween,
-                child: CircleAvatar(
+                child: const CircleAvatar(
                   radius: 30,
                   backgroundColor: Colors.blue,
                 ),
@@ -111,22 +111,22 @@ class _Home2State extends State<Home2> with TickerProviderStateMixin {
                     onPressed: () {
                       _parent.forward();
                     },
-                    child: Text('f')),
+                    child: const Text('f')),
                 ElevatedButton(
                     onPressed: () {
                       _parent.reverse();
                     },
-                    child: Text('R')),
+                    child: const Text('R')),
                 ElevatedButton(
                     onPressed: () {
                       _parent.stop();
                     },
-                    child: Text('s')),
+                    child: const Text('s')),
                 ElevatedButton(
                     onPressed: () {
                       _parent.reset();
                     },
-                    child: Text('R'))
+                    child: const Text('R'))
               ],
             ),
           ),
@@ -139,12 +139,12 @@ class _Home2State extends State<Home2> with TickerProviderStateMixin {
                     onPressed: () {
                       _parent.repeat();
                     },
-                    child: Text('R')),
+                    child: const Text('R')),
                 ElevatedButton(
                     onPressed: () {
                       _parent.repeat(reverse: true);
                     },
-                    child: Text('R'))
+                    child: const Text('R'))
               ],
             ),
           )

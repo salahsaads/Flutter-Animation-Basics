@@ -24,7 +24,7 @@ class _Animated_BuilderState extends State<Animated_Builder>
     super.initState();
     animationController = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 5),
+      duration: const Duration(seconds: 5),
     );
     animation =
         ColorTween(begin: Colors.red, end: Colors.blue).animate(CurvedAnimation(
@@ -37,13 +37,13 @@ class _Animated_BuilderState extends State<Animated_Builder>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Animated Builder"),
+        title: const Text("Animated Builder"),
       ),
       body: Column(
         children: [
           AnimatedBuilder(
             animation: animation,
-            child: Column(
+            child: const Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text("Text 1"),
@@ -60,7 +60,7 @@ class _Animated_BuilderState extends State<Animated_Builder>
               );
             },
           ),
-          Spacer(),
+          const Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -68,19 +68,19 @@ class _Animated_BuilderState extends State<Animated_Builder>
                 onPressed: () {
                   animationController.forward();
                 },
-                child: Text("Forward"),
+                child: const Text("Forward"),
               ),
               ElevatedButton(
                 onPressed: () {
                   animationController.reverse();
                 },
-                child: Text("Forward"),
+                child: const Text("Forward"),
               ),
               ElevatedButton(
                 onPressed: () {
                   animationController.stop();
                 },
-                child: Text("Stop"),
+                child: const Text("Stop"),
               )
             ],
           )

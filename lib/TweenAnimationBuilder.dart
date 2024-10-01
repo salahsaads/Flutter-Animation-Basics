@@ -17,7 +17,7 @@ class _Home1State extends State<Home1> {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const Screen1()));
           },
-          child: Text("Go"))
+          child: const Text("Go"))
     ]));
   }
 }
@@ -35,7 +35,7 @@ class Screen1 extends StatelessWidget {
           children: [
             TweenAnimationBuilder(
                 tween: IntTween(begin: 1, end: 100),
-                duration: Duration(seconds: 60),
+                duration: const Duration(seconds: 60),
                 builder: (BuildContext context, value, child) {
                   return Text(
                     value.toString(),

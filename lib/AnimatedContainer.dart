@@ -17,19 +17,19 @@ class _HomeState extends State<Home> {
     return Scaffold(
         body: Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Center(
           child: AnimatedContainer(
             curve: Curves.fastOutSlowIn,
-            duration: Duration(seconds: 10),
+            duration: const Duration(seconds: 10),
             width: width,
             height: height,
             color: color,
           ),
         ),
-        Spacer(),
+        const Spacer(),
         ElevatedButton(
             onPressed: () {
               setState(() {
@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
                 }
               });
             },
-            child: Text("Click"))
+            child: const Text("Click"))
       ],
     ));
   }
