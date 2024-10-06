@@ -20,24 +20,24 @@ class _Animated_RotationState extends State<Animated_Rotation> {
       ),
       body: Column(
         children: [
-          Spacer(),
+          const Spacer(),
           AnimatedRotation(
               alignment: Alignment.topRight, // مركز اللفه
               turns: _angle, //عدد اللفات
               // curve: Curves.easeIn,
-              duration: Duration(seconds: 1),
-              child: Center(child: FlutterLogo(size: 150))),
+              duration: const Duration(seconds: 1),
+              child: const Center(child: FlutterLogo(size: 150))),
           GestureDetector(
             onTap: () => setState(() => _angle -= 1),
-            child: Icon(
+            child: const Icon(
               Icons.rotate_left_outlined,
               size: 50,
             ),
           ),
           GestureDetector(
               onTap: () => setState(() => _angle += 1),
-              child: Icon(Icons.rotate_right_outlined, size: 50)),
-          Spacer(),
+              child: const Icon(Icons.rotate_right_outlined, size: 50)),
+          const Spacer(),
         ],
       ),
     );

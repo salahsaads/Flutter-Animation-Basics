@@ -16,7 +16,7 @@ class _Rotation_TransitionState extends State<Rotation_Transition>
   void initState() {
     // TODO: implement initState
     super.initState();
-    parent = AnimationController(vsync: this, duration: Duration(seconds: 5));
+    parent = AnimationController(vsync: this, duration: const Duration(seconds: 5));
     _animation = Tween<double>(begin: 0, end: 1).animate(parent);
   }
 
@@ -24,23 +24,23 @@ class _Rotation_TransitionState extends State<Rotation_Transition>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Rotation Transition"),
+        title: const Text("Rotation Transition"),
         backgroundColor: Colors.red,
       ),
       body: Column(children: [
-        Spacer(),
+        const Spacer(),
         RotationTransition(
             alignment: Alignment.topRight,
             turns: _animation,
-            child: FlutterLogo(size: 150)),
-        Spacer(),
+            child: const FlutterLogo(size: 150)),
+        const Spacer(),
         ElevatedButton(
           onPressed: () {
             parent.value == 0 ? parent.forward() : parent.reverse();
           },
-          child: Text("Animation"),
+          child: const Text("Animation"),
         ),
-        Spacer()
+        const Spacer()
       ]),
     );
   }

@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:quran1/0Default_Text_Style_Transition.dart';
 
 import 'Animated Default Text Style.dart';
+import 'Animated Slide.dart';
 
 /// Flutter code sample for [AnimatedContainer].
 
@@ -14,7 +15,7 @@ class AnimatedContainerExampleApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: Animated_Default_Text_Style(),
+        body: Animated_slide(),
       ),
     );
   }

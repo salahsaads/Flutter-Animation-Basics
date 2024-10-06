@@ -14,17 +14,17 @@ class _Animated_OpacityState extends State<Animated_Opacity> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Animated Opacity"),
+        title: const Text("Animated Opacity"),
         backgroundColor: Colors.red,
       ),
       body: Column(children: [
-        Spacer(),
+        const Spacer(),
         AnimatedOpacity(
             curve: Curves.fastOutSlowIn,
-            duration: Duration(seconds: 1),
+            duration: const Duration(seconds: 1),
             opacity: opacityLevel,
-            child: FlutterLogo(size: 150)),
-        Spacer(),
+            child: const FlutterLogo(size: 150)),
+        const Spacer(),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -38,11 +38,11 @@ class _Animated_OpacityState extends State<Animated_Opacity> {
                   }
                 });
               },
-              child: Text("Animation"),
+              child: const Text("Animation"),
             ),
           ],
         ),
-        Spacer()
+        const Spacer()
       ]),
     );
   }
