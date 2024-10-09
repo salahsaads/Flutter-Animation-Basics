@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 
-class Animated_positioned extends StatefulWidget {
-  const Animated_positioned({super.key});
+class Animated_Positioned_Directional extends StatefulWidget {
+  const Animated_Positioned_Directional({super.key});
 
   @override
-  State<Animated_positioned> createState() => _Animated_positionedState();
+  State<Animated_Positioned_Directional> createState() =>
+      _Animated_Positioned_DirectionalState();
 }
 
-class _Animated_positionedState extends State<Animated_positioned> {
+class _Animated_Positioned_DirectionalState
+    extends State<Animated_Positioned_Directional> {
   bool isTrue = true;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Animated Positioned"),
+          title: const Text("Animated Positioned Directional"),
           backgroundColor: Colors.red,
         ),
         body: Center(
@@ -22,13 +23,13 @@ class _Animated_positionedState extends State<Animated_positioned> {
           Expanded(
             child: Stack(
               children: [
-                AnimatedPositioned(
-                  duration: const Duration(seconds: 1),
+                AnimatedPositionedDirectional(
                   curve: Curves.fastOutSlowIn,
-                  height: isTrue ? 50 : 200,
-                  width: isTrue ? 200 : 50,
-                  left: isTrue ? 100 : 0,
+                  duration: Duration(seconds: 1),
                   top: isTrue ? 0 : 100,
+                  start: isTrue ? 100 : 0,
+                  width: isTrue ? 200 : 50,
+                  height: isTrue ? 50 : 200,
                   child: Container(
                     width: 200,
                     height: 50,
