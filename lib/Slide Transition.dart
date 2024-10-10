@@ -62,7 +62,7 @@ class _Slide_transitionState extends State<Slide_transition>
                       controller.forward();
                     }
                   },
-                  child: Text('Animation'))
+                  child: const Text('Animation'))
             ],
           ),
         ));

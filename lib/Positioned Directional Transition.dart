@@ -46,11 +46,6 @@ class _Animated_Positioned_Directional_TransitionState
             child: Stack(
               children: [
                 AnimatedBuilder(
-                    child: Container(
-                      width: 200,
-                      height: 50,
-                      color: Colors.red,
-                    ),
                     animation: animation,
                     builder: (context, child) {
                       return PositionedDirectional(
@@ -60,7 +55,12 @@ class _Animated_Positioned_Directional_TransitionState
                         height: 50 + 150 * animation.value,
                         child: child!,
                       );
-                    })
+                    },
+                    child: Container(
+                      width: 200,
+                      height: 50,
+                      color: Colors.red,
+                    ))
               ],
             ),
           ),

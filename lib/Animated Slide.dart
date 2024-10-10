@@ -32,9 +32,9 @@ class _Animated_slideState extends State<Animated_slide> {
                     color: Colors.red,
                   ),
                   AnimatedSlide(
-                    duration: Duration(seconds: 1),
+                    duration: const Duration(seconds: 1),
                     curve: Curves.fastOutSlowIn,
-                    offset: isShow ? Offset(0, 0) : Offset(.5, -1),
+                    offset: isShow ? const Offset(0, 0) : const Offset(.5, -1),
                     child: Container(
                       width: 100,
                       height: 100,
@@ -49,7 +49,7 @@ class _Animated_slideState extends State<Animated_slide> {
                       isShow = !isShow;
                     });
                   },
-                  child: Text('Animation'))
+                  child: const Text('Animation'))
             ],
           ),
         ));

@@ -25,7 +25,7 @@ class _Animated_Positioned_DirectionalState
               children: [
                 AnimatedPositionedDirectional(
                   curve: Curves.fastOutSlowIn,
-                  duration: Duration(seconds: 1),
+                  duration: const Duration(seconds: 1),
                   top: isTrue ? 0 : 100,
                   start: isTrue ? 100 : 0,
                   width: isTrue ? 200 : 50,

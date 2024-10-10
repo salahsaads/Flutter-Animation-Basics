@@ -42,11 +42,6 @@ class _Positioned_transitionState extends State<Positioned_transition>
             child: Stack(
               children: [
                 AnimatedBuilder(
-                    child: Container(
-                      width: 200,
-                      height: 50,
-                      color: Colors.red,
-                    ),
                     animation: animation,
                     builder: (context, child) {
                       return Positioned(
@@ -56,7 +51,12 @@ class _Positioned_transitionState extends State<Positioned_transition>
                         width: 200 - 150 * animation.value,
                         child: child!,
                       );
-                    }),
+                    },
+                    child: Container(
+                      width: 200,
+                      height: 50,
+                      color: Colors.red,
+                    )),
               ],
             ),
           ),
